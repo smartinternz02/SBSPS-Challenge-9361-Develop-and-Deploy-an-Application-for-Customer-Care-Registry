@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Plasma Donor App</title>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+
+
+<style>
+.login{
+top: 20%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<div>CUSTOMER COMPLAINT REGISTERATION</div>
+
+	<ul>
+		
+		
+		<li><a href="/requester">Request</a></li>
+		<li><a href="/registration">Register</a></li>
+		<li><a class="active" href="/login">Home</a></li>
+	</ul>
+</div>
+ <div class="login">
+		<div>
+		</div>
+
+    <form action="{{ url_for('requested')}}"method="post">
+		<select name="device">
+			<option value="select" selected>Enter your Device</option>
+			<option value="Nothing">Nothing</option>
+			<option value="Oneplus">Oneplus</option>
+			<option value="Iphone">Iphone</option>
+			<option value="Realme">Realme</option>
+			<option value="Oppo">Oppo</option>
+			<option value="Xiaomi">Xiaomi</option>
+			<option value="Asus">Asus</option>
+			<option value="Vivo">Vivo</option>
+		</select>
+		<textarea rows="4" placeholder="Enter the address" required="required" style="color:black" name="address"></textarea>
+		<!input type="textarea" name="address" rows="4" placeholder="Enter the address" required="required" style="color:black" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Submit the Complaint</button>
+    
+    </form>
+
+
+ <br><br>
+<div style="color:black">
+ {{ pred }}</div>
+
+ </div>
+
+
+</body>
+</html>
+

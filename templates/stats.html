@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CUSTOMER COMPLAINT REGISTERATION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+
+</head>
+<style>
+		.big{
+		top:70;
+		background-color:white;
+		margin-top:80px;
+		margin-left:550px;
+		margin-right:550px;
+		height:200px;
+		border-radius: 25px;
+		border: 3px solid #0e6ba8;
+		box-shadow: 6px 8px 4px grey;
+		text1-align:center;
+		}
+		.row{
+		
+		height:150px;
+		
+		}
+		.col{
+			margin:10px;
+			margin-left:50px;	
+			margin-right:50px;
+			border-radius: 25px;
+			border: 1px solid #0e6ba8;
+			box-shadow: 0px 8px 4px grey;
+			text1-align:center;
+		}
+		.ext{
+			margin-top:40px;
+		line-height:50px;
+		font-size:25px;
+		color:#000000;
+		}
+		.ext1{
+		margin-top:40px;
+		line-height:50px;
+		font-size:25px;
+		color:#a6e1fa;
+		}
+		
+</style>
+<body>
+	<div class="img">
+<div class="container-fluid">
+<div class="header">
+<div><b>CUSTOMER COMPLAINT REGISTERATION</b></div>
+<ul>
+	<li><a href="/registration">Register</a></li>
+		<li><a class="active" href="/login">Home</a></li>
+	</ul>
+</div>
+  <br>
+  <div>
+	<form action="{{ url_for('stats')}}"method="post">
+		<select name="device">
+			<option value="select" selected>Enter your Device</option>
+			<option value="Nothing">Nothing</option>
+			<option value="Oneplus">Oneplus</option>
+			<option value="Iphone">Iphone</option>
+			<option value="Realme">Realme</option>
+			<option value="Oppo">Oppo</option>
+			<option value="Xiaomi">Xiaomi</option>
+			<option value="Asus">Asus</option>
+			<option value="Vivo">Vivo</option>
+		</select>
+	
+        <button type="submit" class="btn btn-primary btn-block btn-large" onclick="fun()">Submit the Complaint</button>
+    
+    </form>
+	
+  </div>
+  <script>  
+	function fun() {  
+	alert("Your complaint has been registered and the request is forwarded to the authorized personal");  
+	}  
+	</script> 
+</body>
+</html>
